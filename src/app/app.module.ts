@@ -9,6 +9,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactoComponent } from './contacto/contacto.component';
+import { ContenedorImagenesComponent } from './contenedor-imagenes/contenedor-imagenes.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -26,7 +27,8 @@ const appRoutes: Routes = [
     FooterComponent,
     HomeComponent,
     PortfolioComponent,
-    ContactoComponent
+    ContactoComponent,
+    ContenedorImagenesComponent
   ],
   imports: [
     BrowserModule,
