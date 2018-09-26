@@ -1,11 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { ContainerComponent } from './container/container.component';
 import { ArticleComponent } from './article/article.component';
 import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './home/home.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
+import { ContactoComponent } from './contacto/contacto.component';
+
+const appRoutes: Routes = [
+  { path: 'home', component: HomeComponent },
+  { path: 'portfolio', component: PortfolioComponent },
+  { path: 'contacto', component: ContactoComponent },
+  { path: '**',   redirectTo: '/home' }
+];
 
 @NgModule({
   declarations: [
@@ -13,10 +23,14 @@ import { FooterComponent } from './footer/footer.component';
     HeaderComponent,
     ContainerComponent,
     ArticleComponent,
-    FooterComponent
+    FooterComponent,
+    HomeComponent,
+    PortfolioComponent,
+    ContactoComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
