@@ -10,10 +10,12 @@ import { HomeComponent } from './home/home.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { ContenedorImagenesComponent } from './contenedor-imagenes/contenedor-imagenes.component';
+import { DetallePortfolioComponent } from './detalle-portfolio/detalle-portfolio.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'portfolio', component: PortfolioComponent },
+  { path: 'portfolio/:id', component: DetallePortfolioComponent },
   { path: 'contacto', component: ContactoComponent },
   { path: '**',   redirectTo: '/home' }
 ];
@@ -28,7 +30,8 @@ const appRoutes: Routes = [
     HomeComponent,
     PortfolioComponent,
     ContactoComponent,
-    ContenedorImagenesComponent
+    ContenedorImagenesComponent,
+    DetallePortfolioComponent
   ],
   imports: [
     BrowserModule,

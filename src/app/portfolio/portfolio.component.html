@@ -1,3 +1,13 @@
-<p>
-  portfolio works!
-</p>
+<div class="row align-items-stretch">
+  <div class="col-md-6 col-lg-4 col-xl-3 mb-3" *ngFor="let card of cards">
+    <div class="card h-100">
+      <img class="card-img-top w-100 h-auto" [src]="card.url" [alt]="card.titulo" [title]="card.titulo">
+      <div class="card-body">
+        <h5 class="card-title">{{ card.titulo }}</h5>
+        <p class="card-text">{{ card.descripcion }}</p>
+        <p class="card-text"><small class="text-muted">{{card.fecha}}</small></p>
+        <a class="nav-link" [routerLink]="['/portfolio/', card.id]" routerLinkActive="active">Detalle</a>
+      </div>
+    </div>
+  </div>
+</div>

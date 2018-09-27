@@ -1,9 +1,7 @@
 .img-principal {
     text-align: center;
-}
-
-img{ 
-    height: 250px;
-    width: 250px;
-    padding: 15px;
+    background-color:antiquewhite;
+    color: white;
+    padding: 150px;
+   
 }

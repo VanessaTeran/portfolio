@@ -11,5 +11,25 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  articles = [
+    {
+      id: "buenos_aires",
+      url: "../../assets/bs-as.jpg",
+      descripcion: `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+      Sit error haru`
+    },
+    {
+      id: "icbc",
+      url: "../../assets/icbc1.png",
+      descripcion: `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+      Sit error haru`
+    },
+    {
+      id: "basas",
+      url: "../../assets/bs-as.jpg",
+      descripcion: `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+      Sit error haru`
+    },
+    ];
+    
 }

@@ -10,18 +10,4 @@ export class ContenedorImagenesComponent implements OnInit {
 
   ngOnInit() {}
 
-  rutasImagenes = [
-    {
-      id: "buenos_aires",
-      titulo: "Buenos Aires",
-      url: "../../assets/bs-as.jpg"
-    },
-    {
-      id: "icbc",
-      titulo: "El mejor equipo de IT",
-      url: "../../assets/icbc1.png"
-    },
-
-    
-  ];
 }

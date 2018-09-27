@@ -1,0 +1,12 @@
+.img-porfolio {
+    text-align: center;
+    background-color:antiquewhite;
+    color: white;
+    padding: 150px;
+}
+
+img{ 
+    height: 250px;
+    width: 250px;
+    padding: 15px;
+}
