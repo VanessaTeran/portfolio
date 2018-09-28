@@ -2,7 +2,7 @@
 <div class="py-3">
   <div class="row">
     <div class="col-md-4"*ngFor="let element of articles">
-      <div class="card mb-3 mx-auto" style="max-width: 300px; overflow: hidden">
+      <div class="card mb-3 mx-auto card-article" >
         <img class="card-img-top w-100 h-auto" [src]="element.url" alt="Card image cap">
         <div class="card-body">
           <p class="card-text">{{element.descripcion}}</p>
