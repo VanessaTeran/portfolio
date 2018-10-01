@@ -1,26 +1,28 @@
-<h1>
-  {{detalle.titulo}}
-</h1>
-<h2 class="h4">
-  {{detalle.subTitulo}}
-</h2>
-<div class="row">
-  <div class="col-md-6">
-    <div>
-      <img [src]="fotoActual.url"
-      [title]="fotoActual.titulo"
-      />
 
-    </div>
-    <div class="row" >
-      <div class="col-md-3" *ngFor="let element of detalle.fotos"> 
-        <img (click)="mostrarFoto(element)" style="cursor: pointer" class="w-100 h-auto" 
-          [src]="element.url" 
-          [title]="element.titulo"
-          [alt]="element.titulo"
-           />
+<!-- TODO MOSTRAR CARGANDO-->
+<div *ngIf="detalle == null">
+  <p>Cargando...</p>
+</div>
+<div *ngIf="detalle != null">
+  <h1>
+    {{detalle.titulo}}
+  </h1>
+  <h2 class="h4">
+    {{detalle.subTitulo}}
+  </h2>
+  <div class="row">
+    <div class="col-md-6">
+      <div>
+        <img [src]="fotoActual.url" [title]="fotoActual.titulo" />
+
+      </div>
+      <div class="row">
+        <div class="col-md-3" *ngFor="let element of detalle.fotos">
+          <img (click)="mostrarFoto(element)" style="cursor: pointer" class="w-100 h-auto" [src]="element.url" [title]="element.titulo"
+            [alt]="element.titulo" />
+        </div>
       </div>
     </div>
+    <div class="col-md-6">{{detalle.descripcion}}</div>
   </div>
-  <div class="col-md-6">{{detalle.descripcion}}</div>
 </div>

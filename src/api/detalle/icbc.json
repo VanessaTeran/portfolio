@@ -1,0 +1,12 @@
+{
+  "id": "icbc",
+  "titulo": "Industrial and Comercial Bank of China",
+  "subTitulo": "Detalle portfolio...",
+  "descripcion": "Bunos Aires, etc...",
+  "fotos": [
+    { "url": "/assets/bs-as.jpg", "titulo": "foto1" },
+    { "url": "/assets/bs-as.jpg", "titulo": "foto2" },
+    { "url": "/assets/icbc1.png", "titulo": "foto3" },
+    { "url": "/assets/bs-as.jpg", "titulo": "foto4" }
+  ]
+}

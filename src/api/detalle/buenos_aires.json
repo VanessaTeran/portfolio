@@ -1,0 +1,12 @@
+{
+  "id": "bs-as",
+  "titulo": "Portfolio Works!",
+  "subTitulo": "Detalle portfolio...",
+  "descripcion": "Bunos Aires, etc...",
+  "fotos": [
+    { "url": "/assets/bs-as.jpg", "titulo": "foto1" },
+    { "url": "/assets/bs-as.jpg", "titulo": "foto2" },
+    { "url": "/assets/icbc1.png", "titulo": "foto3" },
+    { "url": "/assets/bs-as.jpg", "titulo": "foto4" }
+  ]
+}

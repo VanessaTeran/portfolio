@@ -1,5 +1,6 @@
-import { Component, OnInit } from "@angular/core";
-
+import { Component } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: "app-detalle-portfolio",
@@ -7,26 +8,23 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./detalle-portfolio.component.css"]
 })
 export class DetallePortfolioComponent {
- 
+  detalle: any = null;
+  fotoActual = null;
 
-  
-  detalle = {
-    id: "bs-as",
-    titulo:"Portfolio Works!",
-    subTitulo: "Detalle portfolio...",
-    descripcion: "Bunos Aires, etc...",
-    fotos: [{ url: "/assets/bs-as.jpg", titulo:"foto1"},
-    { url: "/assets/bs-as.jpg", titulo:"foto2" },
-    { url: "/assets/icbc1.png", titulo:"foto3" },
-    { url: "/assets/bs-as.jpg", titulo:"foto4" }
-    
-  ]
-  };
+  constructor(
+    private http: HttpClient,
+    private activatedRoute: ActivatedRoute
+  ) {}
 
+  async ngOnInit() {
+    const data = this.activatedRoute.snapshot.params;
+    this.detalle = await this.http
+      .get<any>(`/api/detalle/${data.id}.json`)
+      .toPromise();
+    this.fotoActual = this.detalle.fotos[0];
+  }
 
-  fotoActual = this.detalle.fotos[0];
-
-  mostrarFoto(element){
+  mostrarFoto(element) {
     this.fotoActual = element;
   }
   // detalleActual$ = this.router.root.paramMap.

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-home',
@@ -7,29 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  articles: any[] = [];
+  constructor(private http: HttpClient) { }
 
-  ngOnInit() {
+  async ngOnInit() {
+    this.articles = await this.http.get<any[]>("/api/articles.json").toPromise();    
   }
-  articles = [
-    {
-      id: "buenos_aires",
-      url: "../../assets/bs-as.jpg",
-      descripcion: `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-      Sit error haru`
-    },
-    {
-      id: "icbc",
-      url: "../../assets/icbc1.png",
-      descripcion: `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-      Sit error haru`
-    },
-    {
-      id: "basas",
-      url: "../../assets/bs-as.jpg",
-      descripcion: `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-      Sit error haru`
-    },
-    ];
+
     
 }

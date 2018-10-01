@@ -11,6 +11,7 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { ContenedorImagenesComponent } from './contenedor-imagenes/contenedor-imagenes.component';
 import { DetallePortfolioComponent } from './detalle-portfolio/detalle-portfolio.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -35,7 +36,8 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
