@@ -18,21 +18,27 @@
   </div>
 
   <div class="col-md-6">
-    <form class="contact-form p-4">
+    <form class="contact-form p-4" [formGroup]="form">
       <div class="form-group">
-        <label for="fullnameInput">Fullname</label>
-        <input type="text" class="form-control" id="fullnameInput" placeholder="Fullname">
+        <label for="fullnameInput">Nombre y Apellido</label>
+        <input type="text" class="form-control" id="fullnameInput" [ngClass]="{'is-invalid': isInvalid('name')}" placeholder="Nombre y Apellido" formControlName="name">
+        <div class="invalid-feedback" *ngIf="isInvalid('name')">
+          Por favor ingresa un nombre.
+        </div>
       </div>
       <div class="form-group">
-        <label for="emailInput">Email address</label>
-        <input type="email" class="form-control" id="emailInput" placeholder="name@example.com">
+        <label for="emailInput">Email</label>
+        <input type="email" class="form-control" [ngClass]="{'is-invalid': isInvalid('email')}" id="emailInput" placeholder="direccion@email.com" formControlName="email">
+        <div class="invalid-feedback" *ngIf="isInvalid('email')">
+          Por favor ingresa un mail. 
+        </div>
       </div>
 
       <div class="form-group">
-        <label for="commentsInput">Example comments</label>
-        <textarea class="form-control" id="commentsInput" rows="4"></textarea>
+        <label for="commentsInput">Comentario</label>
+        <textarea class="form-control" id="commentsInput" rows="4" formControlName="comment"></textarea>
       </div>
-      <button type="button" value="Input" class="btn btn-dark">Input</button>
+      <button type="button" value="Input" class="btn btn-dark" (click)="send()" [disabled]="!form.valid">Enviar</button>
     </form>
   </div>
 
