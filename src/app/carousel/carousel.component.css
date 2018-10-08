@@ -1,4 +1,16 @@
-img {
-    height: 100px;
-    widows: 100px;
+.carousel {
+    height: 200px;
+    position: relative;
+}
+
+
+.text-image{
+    bottom: 0;
+    position: absolute;
+    background: rgba(255,255,255,0.5)
+}
+
+.carousel img{
+    height: 200px;
+    width: auto;
 }

@@ -1,4 +1,9 @@
 <div class="carousel">
-  <p class="text-image">{{activeImage.title}}</p>
-  <img class="image" [src]="activeImage.ruta" alt="imagen1">
+  <div *ngIf="imagenes == null">
+    <p>Cargando...</p>
+  </div>
+  <div *ngIf="activeImage">
+    <p class="text-image">{{activeImage.title}}</p>
+    <img class="image" [src]="activeImage.ruta" alt="imagen1">
+  </div>
 </div>

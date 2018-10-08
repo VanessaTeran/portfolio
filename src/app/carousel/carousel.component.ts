@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
+import { ActivatedRoute } from "@angular/router";
 import { callbackify } from "util";
 
 export interface RutaImagen {
@@ -12,12 +14,18 @@ export interface RutaImagen {
   styleUrls: ["./carousel.component.css"]
 })
 export class CarouselComponent implements OnInit {
-  constructor() {
-    this.activeImage = this.imagenes[0];
+  constructor(
+    private http: HttpClient,
+    private activatedRoute: ActivatedRoute
+  ) {
     this.changeImage();
   }
 
-  ngOnInit() {}
+  async ngOnInit() {
+    this.imagenes = await this.http
+      .get<any>(`/api/carousel.json`)
+      .toPromise();
+  }
 
   activeImage: RutaImagen;
 
@@ -27,12 +35,13 @@ export class CarouselComponent implements OnInit {
 
   changeImage() {
     this.activeImageIndex++;
+    if (this.imagenes && this.imagenes.length) {
 
-    if (this.activeImageIndex === this.imagenes.length)
-      this.activeImageIndex = 0;
+      if (this.activeImageIndex === this.imagenes.length)
+        this.activeImageIndex = 0;
 
-    this.activeImage = this.imagenes[this.activeImageIndex];
-
+      this.activeImage = this.imagenes[this.activeImageIndex];
+    }
     setTimeout(() => this.changeImage(), 2000);
   }
 }
