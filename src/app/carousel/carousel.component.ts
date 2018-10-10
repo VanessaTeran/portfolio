@@ -22,9 +22,7 @@ export class CarouselComponent implements OnInit {
   }
 
   async ngOnInit() {
-    this.imagenes = await this.http
-      .get<any>(`/api/carousel.json`)
-      .toPromise();
+    this.imagenes = await this.http.get<any>(`/api/carousel.json`).toPromise();
   }
 
   activeImage: RutaImagen;
@@ -36,7 +34,6 @@ export class CarouselComponent implements OnInit {
   changeImage() {
     this.activeImageIndex++;
     if (this.imagenes && this.imagenes.length) {
-
       if (this.activeImageIndex === this.imagenes.length)
         this.activeImageIndex = 0;
 

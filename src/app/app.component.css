@@ -5,6 +5,7 @@
 }
 
 .content {
+  background-color: rgb(228, 224, 227);
   flex: 1 0 auto;
 }
 .footer {

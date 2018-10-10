@@ -5,7 +5,6 @@ import { RouterModule, Routes } from "@angular/router";
 import { AppComponent } from "./app.component";
 import { HeaderComponent } from "./header/header.component";
 import { ContainerComponent } from "./container/container.component";
-import { ArticleComponent } from "./article/article.component";
 import { FooterComponent } from "./footer/footer.component";
 import { HomeComponent } from "./home/home.component";
 import { PortfolioComponent } from "./portfolio/portfolio.component";
@@ -28,7 +27,6 @@ const appRoutes: Routes = [
     AppComponent,
     HeaderComponent,
     ContainerComponent,
-    ArticleComponent,
     FooterComponent,
     HomeComponent,
     PortfolioComponent,
