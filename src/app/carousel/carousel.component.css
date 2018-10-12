@@ -1,17 +1,16 @@
 .carousel {
-    position: relative;
-    text-align: center;
+  position: relative;
+  text-align: center;
 }
 
-
-.text-image{
-    bottom: 0;
-    /*position: absolute;*/
-    text-align: center;
-    background: rgba(255,255,255,0.5)
+.text-image {
+  bottom: 0;
+  /*position: absolute;*/
+  text-align: center;
+  background: rgba(255, 255, 255, 0.5);
 }
 
-.carousel img{
-    margin-bottom: 30px;
-    width: auto;
+.carousel img {
+  margin-bottom: 30px;
+  width: auto;
 }

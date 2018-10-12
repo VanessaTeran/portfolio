@@ -4,7 +4,6 @@ import { ReactiveFormsModule } from "@angular/forms";
 import { RouterModule, Routes } from "@angular/router";
 import { AppComponent } from "./app.component";
 import { HeaderComponent } from "./header/header.component";
-import { ContainerComponent } from "./container/container.component";
 import { FooterComponent } from "./footer/footer.component";
 import { HomeComponent } from "./home/home.component";
 import { PortfolioComponent } from "./portfolio/portfolio.component";
@@ -26,7 +25,6 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     HeaderComponent,
-    ContainerComponent,
     FooterComponent,
     HomeComponent,
     PortfolioComponent,

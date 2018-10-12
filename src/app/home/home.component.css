@@ -1,5 +1,6 @@
 
 .card-home {
+  background-color:rgb(247, 235, 242);
   max-width: 350px; 
   overflow: hidden; /*The overflow is clipped, and the rest of the content will be invisible*/
   

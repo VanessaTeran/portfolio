@@ -21,16 +21,18 @@
     <form class="contact-form p-4" [formGroup]="form">
       <div class="form-group">
         <label for="fullnameInput">Nombre y Apellido</label>
-        <input type="text" class="form-control" id="fullnameInput" [ngClass]="{'is-invalid': isInvalid('name')}" placeholder="Nombre y Apellido" formControlName="name">
+        <input type="text" class="form-control" id="fullnameInput" [ngClass]="{'is-invalid': isInvalid('name')}"
+          placeholder="Nombre y Apellido" formControlName="name">
         <div class="invalid-feedback" *ngIf="isInvalid('name')">
           Por favor ingresa un nombre.
         </div>
       </div>
       <div class="form-group">
         <label for="emailInput">Email</label>
-        <input type="email" class="form-control" [ngClass]="{'is-invalid': isInvalid('email')}" id="emailInput" placeholder="direccion@email.com" formControlName="email">
+        <input type="email" class="form-control" [ngClass]="{'is-invalid': isInvalid('email')}" id="emailInput"
+          placeholder="direccion@email.com" formControlName="email">
         <div class="invalid-feedback" *ngIf="isInvalid('email')">
-          Por favor ingresa un mail. 
+          Por favor ingresa un mail.
         </div>
       </div>
 

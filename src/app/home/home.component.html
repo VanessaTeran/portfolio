@@ -1,6 +1,12 @@
-<app-carousel></app-carousel>
+<div class="full-width main-header">
+  <div class="main-header__box">  
+    <h1 class="main-header__title"></h1>
+    <h2 class="main-header__subtitle"></h2>
+  </div>
+</div>
 
-<div  *ngIf="articles.length == 0">Cargando...</div>
+ <app-carousel></app-carousel>
+<div *ngIf="articles.length == 0">Cargando...</div>
 <div *ngIf="articles.length > 0">
   <div class="py-3">
     <div class="row">
