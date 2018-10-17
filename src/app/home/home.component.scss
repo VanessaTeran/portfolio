@@ -1,5 +1,6 @@
 .main-header {
-  background-image: url("../../assets/textdifuminad.jpg");
+ /* background-image: url("../../assets/textdifuminad.jpg");*/
+  background-image: linear-gradient(to right, rgba(243, 123, 123, 0), rgb(230, 84, 84));
   background-color: #d46969;
   height: 300px;
   background-position: center; /* Center the image */
@@ -9,11 +10,14 @@
   padding: 2em 3em;
 
   &__box {
+    font-family: 'Armata';
     padding-top: 5%;
     border-radius: 0.5rem;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.1);
     height: 100%;
   }
+
+
   &__title,
   &__subtitle {
     text-align: center;

@@ -5,7 +5,7 @@
 }
 
 .content {
-  background-color:rgb(247, 235, 242);
+ /* background-color:rgb(247, 235, 242);*/
   flex: 1 0 auto;
 }
 .footer {
