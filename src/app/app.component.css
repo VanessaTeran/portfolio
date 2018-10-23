@@ -1,6 +1,6 @@
 :host() {
-  display: flex;
-  flex-direction: column;
+  display: flex; /*	Specifies how an element should be displayed, "flex": establece la longitud flexible en elementos flexibles*/
+  flex-direction: column;  /*especifica cómo colocar los objetos flexibles en el contenedor flexible definiendo el eje principal y la dirección (normal o al revés).*/ /* La dirección en la que se apilas las líneas de texto */
   height: 100%;
 }
 
@@ -8,6 +8,7 @@
  /* background-color:rgb(247, 235, 242);*/
   flex: 1 0 auto;
 }
-.footer {
-  flex-shrink: 0;
-}
+
+/* .footer {
+  flex-shrink: 0;  especifica el factor de contracción de un flex item. 
+} */

@@ -32,6 +32,8 @@ export class CarouselComponent implements OnInit {
   activeImageIndex: number = 0;
 
   changeImage() {
+    /*esto funciona con el .json como servidor para las imagenes del carousel (linea 24)*/
+
     this.activeImageIndex++;
     if (this.imagenes && this.imagenes.length) {
       if (this.activeImageIndex === this.imagenes.length)
