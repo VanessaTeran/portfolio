@@ -12,12 +12,14 @@ import { ContenedorImagenesComponent } from "./contenedor-imagenes/contenedor-im
 import { DetallePortfolioComponent } from "./detalle-portfolio/detalle-portfolio.component";
 import { HttpClientModule } from "@angular/common/http";
 import { CarouselComponent } from './carousel/carousel.component';
+import { BlogComponent } from './blog/blog.component';
 
 const appRoutes: Routes = [
   { path: "home", component: HomeComponent },
   { path: "portfolio", component: PortfolioComponent },
   { path: "portfolio/:id", component: DetallePortfolioComponent },
   { path: "contacto", component: ContactoComponent },
+  { path: "blog", component: BlogComponent },
   { path: "**", redirectTo: "/home" }
 ];
 
@@ -31,7 +33,8 @@ const appRoutes: Routes = [
     ContactoComponent,
     ContenedorImagenesComponent,
     DetallePortfolioComponent,
-    CarouselComponent
+    CarouselComponent,
+    BlogComponent
   ],
   imports: [
     BrowserModule,
